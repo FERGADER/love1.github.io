@@ -1,0 +1,323 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Para Gabi · Lo que el tiempo guarda</title>
+<meta name="theme-color" content="#f7f3eb">
+<meta name="description" content="Un pequeño rincón para lo que el tiempo guarda. Para Gabi, con cariño.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Dancing+Script:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root{--paper:#f7f3eb;--card:#fffcf6;--ink:#3d453c;--muted:#747568;--line:#d9d9cb;--accent:#667558;--soft:#e9eddf;--shadow:0 20px 60px #303a2515;color-scheme:light}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:100px}body{margin:0;background:radial-gradient(#89937115 .7px,transparent .7px),var(--paper);background-size:5px 5px;color:var(--ink);font-family:'Cormorant Garamond',Georgia,serif;transition:background .3s,color .3s}body.night{--paper:#202720;--card:#2a332a;--ink:#eeeadd;--muted:#b8bfab;--line:#46513f;--accent:#bacba1;--soft:#364130;color-scheme:dark}a{color:inherit}button,input{font:inherit}button,a{touch-action:manipulation}button{cursor:pointer}button,.button,.spotify{min-height:48px;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:100px;padding:12px 22px;font-family:Arial,sans-serif;font-size:12px;letter-spacing:.04em;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;gap:10px;transition:background .2s,transform .2s}button:hover,.button:hover{background:var(--soft);transform:translateY(-2px)}:focus-visible{outline:3px solid var(--accent);outline-offset:5px}button[aria-pressed=true],.primary{background:var(--ink);color:var(--paper)}[hidden]{display:none!important}.skip{position:fixed;top:-100px;left:20px;z-index:100}.skip:focus{top:20px}.progress{position:fixed;top:0;left:0;height:3px;width:100%;transform:scaleX(0);transform-origin:left;background:var(--accent);z-index:60}
+nav{position:sticky;top:0;z-index:20;display:flex;align-items:center;justify-content:space-between;gap:18px;padding:16px max(5vw,20px);background:var(--paper);border-bottom:1px solid var(--line)}.logo{text-decoration:none;font-family:'Dancing Script',cursive;font-size:30px;white-space:nowrap}.nav-links{display:flex;gap:28px}.nav-links a{font:11px Arial,sans-serif;letter-spacing:.1em;text-decoration:none;min-height:44px;display:flex;align-items:center;position:relative}.nav-links a[aria-current=true]:after{content:'';height:2px;position:absolute;bottom:2px;left:0;right:0;background:var(--accent)}.tools{display:flex;gap:8px}.tools button{padding:10px 14px}.menu-button{display:none}main{max-width:1680px;margin:auto}section{padding:100px 7%;border-bottom:1px solid var(--line);position:relative}.eyebrow{font:10px Arial,sans-serif;letter-spacing:.22em;color:var(--muted);text-transform:uppercase;margin-bottom:24px}h1,h2{font-weight:400;margin:0;line-height:1.04;text-wrap:balance}h1{font-size:clamp(52px,6.8vw,108px);letter-spacing:-.045em}h1 em{color:var(--accent);font-weight:400}h2{font-size:clamp(35px,4vw,60px);letter-spacing:-.025em}p{font-size:21px;line-height:1.65;margin:20px 0}.script{font-family:'Dancing Script',cursive;font-size:28px}.hero{display:grid;grid-template-columns:1.1fr 1fr;gap:9%;align-items:center;min-height:calc(100svh - 85px);padding-top:65px;padding-bottom:75px}.hero-text{max-width:620px}.hero-text p{max-width:430px;color:var(--muted);font-style:italic;font-size:22px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.hero-art{position:relative;padding:25px 8px}.hero-photo{padding:16px 16px 44px;background:var(--card);box-shadow:var(--shadow);transform:rotate(4deg);position:relative}.hero-photo:before{content:'';position:absolute;top:-12px;left:35%;width:110px;height:32px;background:#b6bda589;transform:rotate(-10deg);z-index:1}.hero-photo img{display:block;width:100%;height:clamp(260px,33vw,500px);object-fit:cover;filter:saturate(.72)}.hero-photo .script{text-align:center;margin:20px 0 0;font-size:26px}.hero-note{position:absolute;bottom:-5px;left:-35px;background:var(--soft);border:1px solid var(--line);padding:20px 24px;transform:rotate(-7deg);font:24px 'Dancing Script',cursive;box-shadow:var(--shadow)}.hero-meta{margin-top:42px;font:10px Arial,sans-serif;color:var(--muted);letter-spacing:.15em}.flower{display:none}.section-top{display:flex;justify-content:space-between;align-items:center;gap:20px}.memories{display:grid;grid-template-columns:.8fr 1.6fr;gap:8%;align-items:center}.memory-intro p{color:var(--muted)}.gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px 20px}.polaroid{min-width:0;background:var(--card);padding:10px 10px 20px;box-shadow:var(--shadow);transform:rotate(var(--rotation));transition:transform .3s}.polaroid:hover,.polaroid:focus-within{transform:rotate(0) translateY(-8px)}.polaroid img{width:100%;aspect-ratio:4/5;object-fit:cover;display:block;filter:saturate(.7)}.polaroid span{display:block;font:21px 'Dancing Script',cursive;text-align:center;margin-top:16px}.zoom{cursor:zoom-in}.letter{display:grid;grid-template-columns:1.15fr .85fr;gap:9%;align-items:start}.letter-content{background:var(--card);padding:clamp(24px,4vw,58px);border:1px solid var(--line);box-shadow:var(--shadow)}.letter-content p{font-size:22px}.letter-image{padding:12px 12px 36px;background:var(--card);transform:rotate(3deg);box-shadow:var(--shadow);margin-top:45px}.letter-image img{width:100%;height:300px;object-fit:cover}.quote{font-size:25px;line-height:1.5;font-style:italic;border-left:2px solid var(--accent);padding:10px 0 10px 28px;margin-top:45px}.envelope{display:block;width:100%;border-radius:4px;padding:35px 24px;background:linear-gradient(155deg,transparent 49.6%,var(--line) 50%,transparent 50.4%),var(--soft);margin:28px 0 0;min-height:150px;font-family:'Dancing Script',cursive;font-size:28px}.letter-hint{color:var(--muted);font:12px Arial,sans-serif;margin-top:16px}.confession{display:grid;grid-template-columns:.8fr 1.2fr;gap:10%;align-items:center}.confession img{width:100%;height:380px;object-fit:cover;border:12px solid var(--card);transform:rotate(-3deg);box-shadow:var(--shadow)}.confession p{max-width:650px}.playlist{display:grid;grid-template-columns:.8fr 1.2fr;gap:8%;align-items:center}.playlist img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:50%;border:30px solid #252b25;box-shadow:var(--shadow)}.playlist>p{grid-column:1/-1;color:var(--accent);margin-bottom:0}.spotify{background:var(--ink);color:var(--paper);margin-top:10px}.music-note{font:12px/1.7 Arial,sans-serif;color:var(--muted)}.sound-bars{display:inline-flex;align-items:center;gap:3px;height:18px}.sound-bars i{width:3px;height:6px;background:currentColor}.playing .sound-bars i{animation:bars .8s alternate infinite}.playing .sound-bars i:nth-child(2){animation-delay:.2s}.playing .sound-bars i:nth-child(3){animation-delay:.4s}@keyframes bars{to{height:18px}}.final{text-align:center;background:var(--soft)}.final-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin:45px 0}.final-grid p{font-size:21px;font-style:italic}.final-grid p+p{border-left:1px solid var(--line);padding-left:35px}.final>.script{max-width:650px;margin:30px auto}.final-photo{display:block;width:100%;height:300px;object-fit:cover;filter:saturate(.6)}footer{padding:28px 6%;display:flex;justify-content:space-between;align-items:center;font:24px 'Dancing Script',cursive}footer a{font:12px Arial,sans-serif}.lightbox{border:0;background:#18201af5;color:#fff;width:100vw;max-width:none;height:100dvh;max-height:none;padding:70px 70px 90px;margin:0}.lightbox::backdrop{background:#18201a}.lightbox[open]{display:flex;align-items:center;justify-content:center}.lightbox figure{margin:0;text-align:center;max-width:100%}.lightbox img{max-width:100%;max-height:70dvh;object-fit:contain;border:10px solid #fffcf6}.lightbox figcaption{font-size:22px;margin-top:18px}.lightbox button{background:#ffffff14;color:white;border-color:#ffffff50}.close{position:absolute;top:20px;right:22px}.prev,.next{position:absolute;top:48%;padding:12px 17px}.prev{left:12px}.next{right:12px}.viewer-help{position:absolute;bottom:20px;font:11px Arial,sans-serif;color:#cbd2c5}.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);z-index:70;background:var(--ink);color:var(--paper);padding:16px 24px;border-radius:18px;max-width:90%;font:14px/1.5 Arial,sans-serif;text-align:center;box-shadow:var(--shadow)}.petal{position:fixed;pointer-events:none;z-index:65;color:var(--accent);font-size:28px;animation:float 2s ease-out forwards}@keyframes float{to{transform:translate(var(--drift),-200px) rotate(35deg);opacity:0}}body.tv p{font-size:clamp(25px,2vw,36px)}body.tv .nav-links a,body.tv button,body.tv .button{font-size:18px}body.tv section{padding-top:100px;padding-bottom:100px}body.tv .letter{grid-template-columns:1.3fr .7fr}body.tv .letter-content{padding:40px}body.tv .eyebrow{font-size:15px}body.tv .nav-links{gap:18px}
+@media(min-width:1900px){html{font-size:20px}main{max-width:2000px}p,.letter-content p,.final-grid p{font-size:28px}.nav-links a,button,.button,.spotify{font-size:17px}.eyebrow{font-size:14px}.hero{min-height:850px}h1{font-size:120px}h2{font-size:70px}.hero-photo img{height:620px}.hero-text p{font-size:30px}.gallery{gap:40px}.polaroid span{font-size:30px}}
+@media(max-width:1000px){.nav-links{gap:16px}.hero{gap:6%}.memories{grid-template-columns:1fr;gap:45px}.memory-intro{max-width:550px}.gallery{gap:30px}.letter{gap:5%}.playlist{gap:6%}.final-grid{gap:24px}.tools button{font-size:11px;padding:10px}.hero-note{left:-10px}}
+@media(max-width:700px){nav{padding:12px 5%;flex-wrap:wrap;gap:10px}.logo{font-size:27px}.menu-button{display:inline-flex}.nav-links{display:none;order:3;width:100%;flex-wrap:wrap;justify-content:center;border-top:1px solid var(--line);padding-top:10px;gap:8px 22px}.nav-links.open{display:flex}.nav-links a{font-size:12px}.tools{margin-left:auto;gap:6px}.tools button{min-height:44px;padding:10px}.hero{grid-template-columns:1fr;padding-top:50px;gap:30px;min-height:auto}.hero-text{max-width:520px}h1{font-size:clamp(50px,12vw,78px)}.hero-text p{font-size:21px}.hero-art{width:88%;max-width:420px;justify-self:center;margin:10px 0 20px}.hero-photo img{height:320px}.hero-meta{margin-top:28px;font-size:9px}.hero-note{font-size:22px}section{padding:65px 6%}.gallery{grid-template-columns:repeat(2,minmax(0,1fr));gap:25px 18px}.polaroid span{font-size:20px}.letter,.confession,.playlist,body.tv .letter{grid-template-columns:1fr;gap:40px}.letter-image{margin-top:0;max-width:450px;margin-inline:auto}.letter-content p{font-size:21px}.quote{font-size:24px}.confession>div:first-child{max-width:380px;width:90%;margin:auto}.confession img{height:300px}.playlist>div:first-child{width:70%;max-width:300px;margin:auto}.final-grid{grid-template-columns:1fr;gap:14px;margin:30px 0}.final-grid p+p{border-left:0;border-top:1px solid var(--line);padding:25px 0 0}.final-photo{height:220px}.lightbox{padding:75px 50px 90px}.lightbox img{border-width:5px}.viewer-help{max-width:80%;text-align:center;line-height:1.6}.prev,.next{padding:12px;min-width:42px}.prev{left:3px}.next{right:3px}footer{font-size:21px}body.tv .nav-links a,body.tv button{font-size:13px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}.petal{display:none}}
+@media print{nav,.actions,button,.envelope,.letter-hint,.progress,.toast,.music-note,.hero-meta{display:none!important}body{background:white;color:black}.letter-body[hidden]{display:block!important}section{break-inside:avoid;padding:30px 0}.hero{min-height:0}.hero-art{max-width:300px}p,.letter-content p{font-size:15px}}
+</style>
+<link rel="stylesheet" href="experience.css">
+</head>
+
+<body>
+
+<a class="skip button" href="#inicio">Saltar al contenido</a><div class="progress" aria-hidden="true"></div>
+<nav aria-label="Navegación principal"><a class="logo" href="#inicio">Gabi ♡</a><div class="nav-links" id="navigation">
+  <a href="#inicio">Inicio</a><a href="#recuerdos">Recuerdos</a><a href="#carta">La carta</a>
+  <a href="#playlist">Música</a><a href="#final">Para ti</a></div><div class="tools"><button id="theme" aria-label="Activar modo nocturno" aria-pressed="false">
+    ☾ <span>Noche</span></button><button id="tv" aria-label="Modo de lectura para TV" aria-pressed="false">TV</button>
+    <button class="menu-button" aria-expanded="false" aria-controls="navigation" id="menu">Menú</button></div></nav><main>
+
+<!-- PORTADA -->
+
+<section class="hero" id="inicio"><div class="hero-text"><div class="eyebrow">PARA GABI, CON CARIÑO · DE ESTEBAN</div><h1>Lo que el<br>tiempo <em>guarda.</em>
+<div class="actions"><a class="button primary" href="#carta" id="startLetter">Abrir mi carta <span aria-hidden="true">
+  ↗</span></a><a class="button" href="#recuerdos">Nuestros recuerdos ↓</a></div><div class="hero-meta">SEIS CAPÍTULOS · SIN PRISA · DESDE EL CORAZÓN</div>
+</div><div class="hero-art"><div class="hero-photo"><img class="zoom" fetchpriority="high" src="img/7.jpeg" alt="Un cielo que invita a recordar">
+  <p class="script">Hay instantes que se quedan.</p></div><div class="hero-note">Gracias por existir ♡</div></div></section>
+
+<!-- RECUERDOS -->
+
+<section id="recuerdos">
+
+    <div class="memories">
+
+    <div class="memory-intro reveal">
+      <div class="eyebrow"></div>
+      <h2>Los momentos que siempre van a quedarse</h2>
+    </div>
+
+    <div class="gallery reveal">
+
+      <div class="polaroid" style="--rotation:-3deg">
+        <img class="zoom" src="img/1.gif">
+      </div>
+
+      <div class="polaroid" style="--rotation:2deg">
+        <img class="zoom" src="img/2.gif">
+      </div>
+
+      <div class="polaroid" style="--rotation:4deg">
+        <img class="zoom" src="img/3.gif">
+      </div>
+
+      <div class="polaroid" style="--rotation:2deg">
+        <img class="zoom" src="img/4.gif">
+      </div>
+
+      <div class="polaroid" style="--rotation:2deg">
+        <img class="zoom" src="img/11.jpeg">
+      </div>
+
+      <div class="polaroid" style="--rotation:-3deg">
+        <img class="zoom" src="img/8.jpeg">
+      </div>
+
+      <div class="polaroid" style="--rotation:2deg">
+        <img class="zoom" src="img/9.jpeg">
+      </div>
+
+      <div class="polaroid" style="--rotation:3deg">
+        <img class="zoom" src="img/10.jpeg">
+      </div>
+      <div class="polaroid" style="--rotation:3deg">
+        <img class="zoom" src="img/12.jpeg">
+      </div>
+
+
+
+    </div>
+  </div>
+</section>
+
+<!-- CARTA -->
+
+<section id="carta">
+
+  <span class="flower left">❀</span>
+
+  <div class="letter">
+
+    <div class="letter-content reveal">
+      <div class="eyebrow">OPEN</div>
+
+    
+
+<button class="envelope" id="envelope" aria-expanded="false" aria-controls="letterBody">♡<br> Toca para abrir</button><div class="letter-hint">Léela a tu ritmo. Este espacio es para ti.</div><div class="letter-body" id="letterBody" hidden>      <p>
+        Si pudieras verme hoy
+      </p>
+
+      <p>
+        A veces me pregunto qué pensarías de mí
+        si pudieras conocerme como soy hoy;
+        si al mirarme encontrarías al muchacho de antes
+        o verías cuánto ha cambiado aquel que un día fui.
+      </p>
+
+      <p>
+        No puedo cambiar la historia ni negar mis errores,
+        ni devolverle al pasado sus días mejores;
+        solo cargo conmigo lo que aprendí del dolor
+        y la difícil lección de cuidar mejor el amor.
+      </p>
+
+      <p>
+        Hoy miro hacia adelante, descubriendo quién soy,
+        aprendiendo de cada paso y de aquello que hoy comprendo;
+        hay tantas partes de mí que apenas estoy conociendo
+        y tantas cosas bonitas que todavía estoy construyendo.
+      </p>
+
+      <p>
+        Hoy quiero que mis acciones hablen por mí,
+        que reflejen todo aquello que he aprendido;
+        porque más allá de quien fui alguna vez,
+        hay alguien nuevo que todavía sigue creciendo.
+      </p>
+
+      <p>
+        Me habría gustado que vieras en quién me convertí,
+        que conocieras al hombre que antes no supe mostrarte a ti.
+      </p>
+
+      <p>
+        Y aunque tal vez no tenga la oportunidad de demostrártelo hoy,
+        sigo siendo aquel que un día soñó con ser mejor para los dos.
+      </p>
+<p class="script">Con cariño, Esteban.</p><button id="saveLetter">Guardar la carta ↓</button></div>    </div>
+
+    <div class="reveal">
+      <div class="letter-image">
+        <img class="zoom" src="https://images.unsplash.com/photo-1455390582262-044cdead277a?w=800" alt="Carta escrita">
+      </div>
+
+      <div class="quote">
+        Quiero que sepas que, independientemente de lo que pase entre nosotros,
+        siempre voy a desearte lo mejor. Espero que cumplas cada uno de tus sueños,
+        que encuentres felicidad en las pequeñas cosas y que nunca te falten motivos para sonreír.
+        Deseo que conozcas lugares, vivas experiencias bonitas y te conviertas en la persona que quieres ser.
+
+        <br><br>
+
+        No sé qué nos tenga preparado la vida ni qué lugar ocuparemos en la historia del otro de ahora en adelante,
+        pero siempre voy a agradecer haberte conocido. Y aunque algún día nuestros caminos estén completamente separados,
+        de corazón voy a querer que estés bien.
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONFESIÓN -->
+
+<section>
+
+  <div class="confession">
+
+    <div class="reveal">
+      <img class="zoom" src="https://images.unsplash.com/photo-1476275466078-4007374efbbe?w=800" alt="Libro y recuerdos">
+      <p class="script" style="text-align:center">Quizás algún día ♡</p>
+    </div>
+
+    <div class="reveal">
+      <div class="eyebrow">04 · Una conversación pendiente</div>
+      <h2>Me gustaría poder hablar contigo</h2>
+
+      <p>
+        Honestamente, hay algo que todavía me gustaría mucho:
+        poder sentarme frente a ti y hablar de todo lo que pasó
+        entre nosotros. Sin prisas, sin orgullo y sin miedo
+        a decir lo que realmente sentimos.
+      </p>
+
+      <p>
+        Me gustaría escucharte. Saber qué te dolió, qué cosas
+        te guardaste, qué sentiste en aquellos momentos en los
+        que quizás no supe entenderte y qué heridas pude dejarte
+        sin darme cuenta.
+      </p>
+
+      <p>
+        También me gustaría poder compartir contigo lo que he
+        comprendido desde entonces. Las cosas que hoy veo de otra
+        manera y todo aquello que desearía haber sabido antes.
+      </p>
+
+      <p>
+        No espero que una conversación cambie el pasado,
+        pero me gustaría que, si algún día deseas tenerla,
+        no quieras estar ahí dispuesto a escuchar de verdad.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- PLAYLIST -->
+
+<section id="playlist">
+
+  <div class="playlist">
+
+    <div class="reveal">
+      <img class="zoom" src="img/spotify.jpeg" alt="Auriculares y música">
+    </div>
+
+    <div class="reveal">
+      <div class="eyebrow"></div>
+      <h2>La playlist</h2>
+
+      <p>
+        Everything we lived through became part of a story 
+        I’ll always carry with me. Every little moment,
+        every memory, and every feeling will always have a special place in my heart.
+      </p>
+
+      <a class="spotify" href="https://open.spotify.com/playlist/03SJP1hSqIXG2d8GxYlhLv?si=_n3ZW9DXTdaGBDIy-5skGQ&utm_source=copy-link&pi=4CwcXt_1RJKZE" target="_blank" rel="noopener noreferrer">
+        ↗ Abrir Spotify
+      </a><div class="actions"><button id="ambience" aria-pressed="false"><span class="sound-bars" aria-hidden="true"><i></i><i></i><i></i></span><span id="ambienceLabel">Ambiente suave</span></button></div><p class="music-note"></p>
+    </div>
+
+    <p class="script reveal" style="text-align:center">
+      La música siempre será un buen lugar para guardar lo que sentimos ♡
+    </p>
+
+  </div>
+</section>
+
+<!-- FINAL -->
+
+<section class="final" id="final">
+
+  <div class="eyebrow"></div>
+  <h2>Las últimas palabras</h2>
+
+  <div class="final-grid reveal">
+
+    <p>
+      "No sé si algún día vas a olvidar,
+      ni puedo ordenar a quien alguien va a ser.
+      No borro lo que pasó, solo intento
+      ser mejor cada día."
+    </p>
+
+    <p>
+      Ojalá la vida nos permita sanar lo que nos dolió,
+      perdonarnos por lo que no supimos ser
+      y volver a elegirnos, esta vez con el amor
+      y la madurez que antes nos faltaron.
+    </p>
+
+    <p>
+      Whatever life has planned for us,
+      I'll always be grateful for what we shared.
+      I'll love you silently the day I do.
+      <br><br>
+      — Esteban
+    </p>
+
+  </div>
+
+  <p class="script" style="margin-bottom:25px">
+    Por todo lo que fue, por todo lo que es,
+    y por todo lo que aún podría ser. ♡
+  </p>
+
+<div class="actions" style="justify-content:center"><button id="heart">Guardar este instante ♡</button><button id="print">Imprimir o guardar PDF ↓</button></div></section>
+</main>
+<img class="final-photo" src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?w=1600" alt="Paisaje al atardecer">
+
+<footer><span>Hecho con cariño, Esteban ♡</span><a href="#inicio">Volver al inicio ↑</a></footer>
+
+<!-- VISOR DE FOTOGRAFÍAS -->
+
+<dialog class="lightbox" id="lightbox" aria-label="Álbum de fotografías"><button class="close" id="closeLightbox" aria-label="Cerrar fotografías">Cerrar ×</button><button class="prev" id="previousPhoto" aria-label="Fotografía anterior">←</button><figure><img id="lightboxImage" alt=""><figcaption id="caption" aria-live="polite"></figcaption></figure><button class="next" id="nextPhoto" aria-label="Fotografía siguiente">→</button><div class="viewer-help">Desliza o usa ← → para explorar · Escape para cerrar</div></dialog><div class="toast" id="toast" role="status" hidden></div><noscript><style>.letter-body[hidden]{display:block!important}.envelope{display:none}</style></noscript><script>
+'use strict';
+const $=s=>document.querySelector(s);const $$=s=>Array.from(document.querySelectorAll(s));
+function read(k){try{return localStorage.getItem(k)}catch{return null}}function save(k,v){try{localStorage.setItem(k,v)}catch{}}
+let toastTimer;function notify(message){$('#toast').textContent=message;$('#toast').hidden=false;clearTimeout(toastTimer);toastTimer=setTimeout(()=>$('#toast').hidden=true,3500)}
+const theme=$('#theme');function setTheme(dark){document.body.classList.toggle('night',dark);theme.setAttribute('aria-pressed',String(dark));theme.setAttribute('aria-label',dark?'Activar modo claro':'Activar modo nocturno');theme.querySelector('span').textContent=dark?'Día':'Noche'}setTheme(read('gabi-theme')==='night');theme.onclick=()=>{setTheme(!document.body.classList.contains('night'));save('gabi-theme',document.body.classList.contains('night')?'night':'day')};
+$('#tv').onclick=()=>{const on=document.body.classList.toggle('tv');$('#tv').setAttribute('aria-pressed',String(on));notify(on?'Modo TV: texto grande. Usa las flechas para navegar y Enter para elegir.':'Modo de lectura normal')};
+$('#menu').onclick=()=>{const open=$('#navigation').classList.toggle('open');$('#menu').setAttribute('aria-expanded',String(open))};$$('.nav-links a').forEach(a=>a.onclick=()=>{$('#navigation').classList.remove('open');$('#menu').setAttribute('aria-expanded','false')});
+function openLetter(){const button=$('#envelope');$('#letterBody').hidden=false;button.setAttribute('aria-expanded','true');button.textContent='Cerrar la carta ♡'}$('#envelope').onclick=()=>{if($('#letterBody').hidden)openLetter();else{$('#letterBody').hidden=true;$('#envelope').setAttribute('aria-expanded','false');$('#envelope').textContent='Una carta para ti ♡ · Toca para abrir'}};$('#startLetter').onclick=openLetter;
+const sections=$$('main section[id]');let scrollQueued=false;function updateScroll(){const max=document.documentElement.scrollHeight-innerHeight;$('.progress').style.transform=`scaleX(${max>0?scrollY/max:0})`;let current=sections[0];sections.forEach(s=>{if(s.getBoundingClientRect().top<=innerHeight*.4)current=s});$$('.nav-links a').forEach(a=>a.setAttribute('aria-current',String(a.hash==='#'+current.id)));scrollQueued=false}addEventListener('scroll',()=>{if(!scrollQueued){scrollQueued=true;requestAnimationFrame(updateScroll)}},{passive:true});addEventListener('resize',updateScroll);updateScroll();
+const photos=$$('img.zoom'),dialog=$('#lightbox');let photoIndex=0,origin=null;
+photos.forEach((img,i)=>{if(!img.alt)img.alt=img.parentElement.querySelector('span')?.textContent||'Un recuerdo';img.tabIndex=0;img.setAttribute('role','button');img.setAttribute('aria-label','Ampliar: '+img.alt);if(i>0){img.loading='lazy';img.decoding='async'}img.addEventListener('click',()=>openPhoto(i));img.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openPhoto(i)}});img.addEventListener('error',()=>{img.style.background='var(--soft)';img.title='No se pudo cargar esta imagen. Revisa tu conexión.'})});
+function showPhoto(i){photoIndex=(i+photos.length)%photos.length;$('#lightboxImage').src=photos[photoIndex].src;$('#lightboxImage').alt=photos[photoIndex].alt;$('#caption').textContent=`${String(photoIndex+1).padStart(2,'0')} / ${photos.length} · ${photos[photoIndex].alt}`}
+function openPhoto(i){origin=document.activeElement;showPhoto(i);dialog.showModal();document.body.style.overflow='hidden'}$('#closeLightbox').onclick=()=>dialog.close();dialog.addEventListener('close',()=>{document.body.style.overflow='';origin?.focus({preventScroll:true})});$('#previousPhoto').onclick=()=>showPhoto(photoIndex-1);$('#nextPhoto').onclick=()=>showPhoto(photoIndex+1);dialog.addEventListener('click',e=>{if(e.target===dialog)dialog.close()});let touchStart=0;dialog.addEventListener('touchstart',e=>touchStart=e.changedTouches[0].clientX,{passive:true});dialog.addEventListener('touchend',e=>{const delta=e.changedTouches[0].clientX-touchStart;if(Math.abs(delta)>55)showPhoto(photoIndex+(delta<0?1:-1))},{passive:true});
+document.addEventListener('keydown',e=>{if(dialog.open){if(e.key==='ArrowRight'){e.preventDefault();showPhoto(photoIndex+1)}if(e.key==='ArrowLeft'){e.preventDefault();showPhoto(photoIndex-1)}return}if(e.key==='Escape'){$('#navigation').classList.remove('open');$('#menu').setAttribute('aria-expanded','false')}if(document.body.classList.contains('tv')&&['ArrowDown','ArrowUp','ArrowLeft','ArrowRight'].includes(e.key)){const targets=$$('a,button,img[tabindex="0"]').filter(el=>el.getClientRects().length&&!el.closest('dialog'));const i=targets.indexOf(document.activeElement);const step=['ArrowDown','ArrowRight'].includes(e.key)?1:-1;e.preventDefault();targets[(i+step+targets.length)%targets.length]?.focus()}});
+$('#saveLetter').onclick=()=>{const text='Para Gabi\n\nSi pudieras verme hoy\n\n'+$$('#letterBody p').map(p=>p.textContent.trim().replace(/\s+/g,' ')).join('\n\n');const url=URL.createObjectURL(new Blob([text],{type:'text/plain;charset=utf-8'}));const a=document.createElement('a');a.href=url;a.download='Una carta para Gabi.txt';a.click();setTimeout(()=>URL.revokeObjectURL(url),2000)};$('#print').onclick=()=>window.print();
+if(read('gabi-keepsake'))$('#heart').textContent='Este instante está guardado ♥';$('#heart').onclick=()=>{save('gabi-keepsake','yes');$('#heart').textContent='Este instante está guardado ♥';notify('Guardado en este navegador, con cariño ♡');if(!matchMedia('(prefers-reduced-motion: reduce)').matches){for(let i=0;i<12;i++){const heart=document.createElement('span');heart.className='petal';heart.textContent='♡';heart.style.left=(35+Math.random()*30)+'vw';heart.style.top='75vh';heart.style.setProperty('--drift',(Math.random()*180-90)+'px');heart.style.animationDelay=(i*.05)+'s';document.body.append(heart);setTimeout(()=>heart.remove(),2800)}}};
+let audioContext=null,master=null,voices=[],playing=false;function stopAudio(){playing=false;voices.forEach(v=>{try{v.stop()}catch{}});voices=[];audioContext?.suspend();$('#ambience').setAttribute('aria-pressed','false');$('#ambience').classList.remove('playing');$('#ambienceLabel').textContent='Ambiente suave'}
+$('#ambience').onclick=async()=>{if(playing){stopAudio();return}try{const Audio=window.AudioContext||window.webkitAudioContext;if(!Audio)throw new Error('unsupported');audioContext??=new Audio();await audioContext.resume();master=audioContext.createGain();master.gain.value=.035;master.connect(audioContext.destination);[130.81,164.81,196,261.63].forEach((freq,i)=>{const osc=audioContext.createOscillator(),gain=audioContext.createGain();osc.type='sine';osc.frequency.value=freq;gain.gain.setValueAtTime(0,audioContext.currentTime);gain.gain.linearRampToValueAtTime(.35,audioContext.currentTime+3+i);osc.connect(gain);gain.connect(master);osc.start();voices.push(osc)});playing=true;$('#ambience').setAttribute('aria-pressed','true');$('#ambience').classList.add('playing');$('#ambienceLabel').textContent='Pausar ambiente'}catch{notify('Este navegador no permite reproducir el ambiente. Puedes abrir Spotify.')}};document.addEventListener('visibilitychange',()=>{if(document.hidden&&playing)stopAudio()});
+</script>
+
+<script src="experience.js"></script>
+</body>
+</html>
